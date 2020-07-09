@@ -1,0 +1,9 @@
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/CodeApplication8081.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/pojo/LagouCode.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/controller/ConfigController.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/feignclients/EmailFallBack.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/service/CodeService.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/dao/CodeDao.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/controller/HelloController.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/controller/CodeController.java
+/Users/liqiaoqiao/lagou-sc-workspace/lagou-parent/lagou-service-code-8081/src/main/java/com/lagou/edu/feignclients/EmailFeignClient.java

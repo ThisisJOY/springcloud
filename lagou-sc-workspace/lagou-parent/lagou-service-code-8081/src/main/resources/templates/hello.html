@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hello</title>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+
+    <style type="text/css">
+        body {
+            background-color:#00b38a;
+            text-align:center;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $(".codeBtn").bind("click",function(){
+                $.ajax({
+                    type:'GET',
+                    url:'http://localhost:9002/code/create/' + $('#email').val(),
+                    success:function(){
+                        alert("验证码成功");
+                    },
+                    error: function() {
+                        alert("验证码失败");
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div style="font-size: 30px;">Hello</div>
+
+<form>
+    <table>
+        <tr>
+            <td align="right"><span>邮箱</span></td>
+            <td align="center">
+                <input type="text" id="email" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" class="codeBtn" value="获取验证码" />
+            </td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

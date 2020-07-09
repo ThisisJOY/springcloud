@@ -1,0 +1,41 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: lagou-service-email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: joyinholland@gmail.com
+    password: lyq520025
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  cloud:
+    # config客户端配置,和ConfigServer通信，并告知ConfigServer希望获取的配置信息在哪个文件中
+    config:
+      name: lagou-service-email  #配置文件名称
+      profile: dev  #后缀名称
+      label: master #分支名称
+      uri: http://localhost:9006    #ConfigServer配置中心地址
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+#注册到Eureka服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://LagouCloudEurekaServerA:8761/eureka,http://LagouCloudEurekaServerB:8762/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

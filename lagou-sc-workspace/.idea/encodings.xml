@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/lagou-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-cloud-configserver-9006" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-cloud-eureka-server-8761" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-cloud-eureka-server-8762" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-cloud-gateway-9002" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-service-code-8081" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-service-email-8082" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lagou-parent/lagou-service-user-8080" charset="UTF-8" />
+  </component>
+</project>
