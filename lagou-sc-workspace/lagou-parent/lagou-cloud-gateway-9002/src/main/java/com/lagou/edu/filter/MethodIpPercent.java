@@ -72,7 +72,7 @@ public class MethodIpPercent {
             if (lastIncrementTime > currentTimeMillis) {
                 return atomicLong.get();
             }
-            return atomicLong.incrementAndGet();
+            return 0L;
         }
 
     }

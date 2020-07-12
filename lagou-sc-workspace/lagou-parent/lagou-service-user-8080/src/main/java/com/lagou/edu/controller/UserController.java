@@ -45,7 +45,7 @@ public class UserController {
         user.setEmail(email);
         user.setPassword(password);
         userService.saveUser(user);
-        // 注册成功，颁发token令牌，存入数据库并写入cookie，重定向到欢迎页
+        // 注册成功，颁发token令牌，存入数据库并写入cookie，前端js重定向到欢迎页
         String token = tokenService.createToken();
         tokenService.saveToken(email, token);
         Cookie tokenCookie = new Cookie("login_token", token);
@@ -64,7 +64,7 @@ public class UserController {
 
         User user = userService.findByEmailAndPassword(email, password);
         if (user != null) {
-            //登录成功，颁发token令牌，存入数据库并写入cookie，重定向到欢迎页
+            //登录成功，颁发token令牌，存入数据库并写入cookie，前端js重定向到欢迎页
             String token = tokenService.createToken();
             tokenService.saveToken(email, token);
             Cookie tokenCookie = new Cookie("login_token", token);

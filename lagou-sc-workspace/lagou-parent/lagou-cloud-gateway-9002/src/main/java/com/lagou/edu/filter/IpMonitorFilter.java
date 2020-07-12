@@ -30,9 +30,14 @@ public class IpMonitorFilter implements GlobalFilter, Ordered {
     private static final List<RequestStrategy> STRATEGIES = new ArrayList<>();
     private static final Map<String, MethodIpPercent> collections = new ConcurrentHashMap<>();
 
+    @Value("${violentBrush.second}")
+    private int x;
+
+    @Value("${violentBrush.times}")
+    private int y;
+
     static {
         STRATEGIES.add(new RequestStrategy(10, 2));
-
         STRATEGIES.forEach(requestStrategy -> {
             collections.put(requestStrategy.getKey(), MethodIpPercent.create(requestStrategy.getSecond(), requestStrategy.getTimes()));
             System.out.println("Init requestStrategy:" + requestStrategy);
@@ -42,6 +47,7 @@ public class IpMonitorFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        System.out.println("===============>" + x + y);
         long startTime = System.currentTimeMillis();
 
         // 获取客户端ip，判断是否在黑名单中，在的话就拒绝访问，不在的话就放行

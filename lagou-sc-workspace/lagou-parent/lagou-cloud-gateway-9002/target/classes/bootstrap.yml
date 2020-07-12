@@ -13,6 +13,11 @@ spring:
   application:
     name: lagou-cloud-gateway
   cloud:
+    config:
+      name: lagou-cloud-gateway  #配置文件名称
+      profile: dev  #后缀名称
+      label: master #分支名称
+      uri: http://localhost:9006    #ConfigServer配置中心地址
     gateway:
       routes:
         - id: service-user-router
